@@ -2,15 +2,18 @@ import { Component, OnInit } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
 import { ApiCall } from '../../providers/api-call';
-import { Company } from '../../app/company';
+import { CompanyArray } from '../../app/companyArray';
+import { CompanyPage } from '../company/company';
+
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
-  companies: Company;
-  selectedCompany: Company;
+  companies: CompanyArray;
+  selectedCompany: CompanyArray;
+  companyPage = CompanyPage;
 
   constructor(
     public navCtrl: NavController,

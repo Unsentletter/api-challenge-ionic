@@ -9,7 +9,12 @@
 <ion-content padding>
   <h3 text-center>Select your company</h3>
   <ion-list>
-    <button ion-item *ngFor="let companyGroup of companies">
+    <button
+      ion-item
+      *ngFor="let companyGroup of companies"
+      [navPush]="companyPage"
+      [navParams]="companyGroup"
+    >
       <h2>{{ companyGroup.display_name }}</h2>
     </button>
   </ion-list>

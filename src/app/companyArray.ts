@@ -1,4 +1,4 @@
-export class Company {
+export class CompanyArray {
   _id: number;
   display_name: string;
   email: string;

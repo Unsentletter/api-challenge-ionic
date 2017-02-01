@@ -4,11 +4,13 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ApiCall } from '../providers/api-call';
+import { CompanyPage } from '../pages/company/company';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    CompanyPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -16,7 +18,8 @@ import { ApiCall } from '../providers/api-call';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    CompanyPage
   ],
   providers: [
     {provide: ErrorHandler, useClass: IonicErrorHandler},

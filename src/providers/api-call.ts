@@ -3,19 +3,12 @@ import { Http, Response, RequestOptions, Headers } from '@angular/http';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
 
-import { Company } from '../app/company';
+import { CompanyArray } from '../app/companyArray';
 
-
-/*
-  Generated class for the ApiCall provider.
-
-  See https://angular.io/docs/ts/latest/guide/dependency-injection.html
-  for more info on providers and Angular 2 DI.
-*/
 @Injectable()
 export class ApiCall {
 
-  companies: Company;
+  companies: CompanyArray;
 
   constructor(public http: Http) {
     console.log('Hello ApiCall Provider');
@@ -29,7 +22,7 @@ export class ApiCall {
 
     return this.http.get(`https://api.demo.muulla.com/cms/merchant/all/active/10/1`, options)
     .toPromise()
-    .then(res => res.json().data as Company)
+    .then(res => res.json().data as CompanyArray)
     // .then(data => { this.companies = data.data})
   }
 

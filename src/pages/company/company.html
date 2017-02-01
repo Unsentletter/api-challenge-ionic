@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{companyGroup.display_name}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item text-center><img src="{{companyGroup.logo.path_to_file}}" /></ion-item>
+    <ion-item>{{companyGroup.email}}</ion-item>
+    <ion-item>{{companyGroup.phone}}</ion-item>
+    <ion-item>{{companyGroup.status}}</ion-item>
+    <ion-item>{{companyGroup.address.address1}}</ion-item>
+    <ion-item>{{companyGroup.address.address2}}</ion-item>
+    <ion-item>{{companyGroup.address.suburb}}</ion-item>
+    <ion-item>{{companyGroup.address.state}}</ion-item>
+    <ion-item>{{companyGroup.address.postcode}}</ion-item>
+    <ion-item>{{companyGroup.address.country}}</ion-item>
+  </ion-list>
+</ion-content>
